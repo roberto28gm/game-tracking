@@ -3,11 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'main',
+    path: '',
     loadChildren: () => import('./game-tracking/game-tracking.module')
       .then(m => m.GameTrackingModule)
   },
-  { path: '**', redirectTo: 'main' }
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
