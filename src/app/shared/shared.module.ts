@@ -6,7 +6,9 @@ import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
+
 
 
 
@@ -20,10 +22,12 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     MatMenuModule,
     MatButtonModule,
-    RouterModule
+    RouterModule,
+    MatTableModule
   ],
   exports: [
-    MenuComponent
+    MenuComponent,
+    MatTableModule
   ]
 })
 export class SharedModule { }

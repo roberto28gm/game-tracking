@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Half Life",
+        "completed": true,
+        "hours": 5,
+        "dateCompleted": "2023-01-01",
+        "image": ""
+    },
+    {
+        "id": 2,
+        "name": "Serious Sam",
+        "completed": true,
+        "hours": 9,
+        "dateCompleted": "2023-01-01",
+        "image": ""
+    },
+    {
+        "id": 3,
+        "name": "System Shock 2",
+        "completed": true,
+        "hours": 5,
+        "dateCompleted": "2023-01-01",
+        "image": ""
+    },
+    {
+        "id": 4,
+        "name": "The Witcher 3",
+        "completed": false,
+        "hours": 28,
+        "dateCompleted": "",
+        "image": ""
+    }
+]

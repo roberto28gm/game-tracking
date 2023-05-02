@@ -1,10 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Game } from '../../interfaces/game.interface';
+import { DataService } from 'src/app/services/data.service';
+
 
 @Component({
   selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  templateUrl: './main.component.html'
 })
-export class MainComponent {
+export class MainComponent implements OnInit {
+  data: Game[] = [];
 
+  constructor(private dataService: DataService){}
+
+  ngOnInit(): void {
+    this.dataService.readJsonData().subscribe(res => {
+      this.data = res;
+    });
+  }
+  
 }
