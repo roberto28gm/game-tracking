@@ -6,19 +6,20 @@ import { MostPlayedComponent } from './pages/most-played/most-played.component';
 import { GameTrackingRoutingModule } from './game-tracking-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { TableComponent } from './components/table/table.component';
-
+import { ColorScorePipe } from '../pipes/color.pipe';
 
 @NgModule({
   declarations: [
     MainComponent,
     PendingComponent,
     MostPlayedComponent,
-    TableComponent
+    TableComponent,
+    ColorScorePipe
   ],
   imports: [
     CommonModule,
     GameTrackingRoutingModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class GameTrackingModule { }

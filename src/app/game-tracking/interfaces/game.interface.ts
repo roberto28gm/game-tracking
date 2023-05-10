@@ -5,5 +5,6 @@ export interface Game {
     completed: boolean;
     hours?: number;
     dateCompleted?: Date;
+    score?: number;
     image?: string;
 }

@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Game } from '../../interfaces/game.interface';
 
+
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -8,13 +9,16 @@ import { Game } from '../../interfaces/game.interface';
 })
 export class TableComponent {
   @Input() data: Game[] = [];
+  IMAGE_WIDTH: number = 150;
+  IMAGE_HEIGHT: number = 150;
+  
   
   displayedColumns: string[] = [
-    'id', 
     'name', 
     'completed', 
     'hours', 
-    'dateCompleted', 
+    'dateCompleted',
+    'score',
     'image'
   ];
 }

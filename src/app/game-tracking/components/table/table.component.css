@@ -1,0 +1,26 @@
+.score {
+    border-radius: 3px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.score-limegreen {
+    background-color: limegreen;
+}
+.score-green {
+    background-color: green;
+}
+.score-yellow {
+    background-color: yellow;
+}
+.score-red {
+    background-color: darkred;
+}
+
+
+.green-icon {
+    color: green;
+}
+.red-icon {
+    color: red;
+}

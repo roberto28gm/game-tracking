@@ -27,7 +27,8 @@ import { MatTableModule } from '@angular/material/table';
   ],
   exports: [
     MenuComponent,
-    MatTableModule
+    MatTableModule,
+    MatIconModule
   ]
 })
 export class SharedModule { }

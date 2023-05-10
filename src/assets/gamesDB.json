@@ -3,32 +3,54 @@
         "id": 1,
         "name": "Half Life",
         "completed": true,
-        "hours": 5,
+        "hours": 6.2,
         "dateCompleted": "2023-01-01",
-        "image": ""
+        "score": 90,
+        "image": "https://i.blogs.es/16c551/hltest/1366_2000.jpg"
     },
     {
         "id": 2,
-        "name": "Serious Sam",
+        "name": "Serious Sam The First Encounter",
         "completed": true,
         "hours": 9,
         "dateCompleted": "2023-01-01",
-        "image": ""
+        "score": 75,
+        "image": "https://i.3djuegos.com/juegos/14064/serious_sam_the_first_encounter/fotos/ficha/serious_sam_the_first_encounter-3549001.jpg"
     },
     {
         "id": 3,
         "name": "System Shock 2",
         "completed": true,
-        "hours": 5,
+        "hours": 6.5,
         "dateCompleted": "2023-01-01",
-        "image": ""
+        "score": 80,
+        "image": "https://upload.wikimedia.org/wikipedia/en/9/91/Systemshock2box.jpg"
     },
     {
         "id": 4,
         "name": "The Witcher 3",
         "completed": false,
-        "hours": 28,
+        "hours": 38.2,
         "dateCompleted": "",
-        "image": ""
+        "score": 75,
+        "image": "https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png"
+    },
+    {
+        "id": 5,
+        "name": "Divinity Original Sin 2",
+        "completed": true,
+        "hours": 210,
+        "dateCompleted": "2021-02-05",
+        "score": 100,
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/435150/capsule_616x353.jpg?t=1668591196"
+    },
+    {
+        "id": 6,
+        "name": "The Outer Worlds",
+        "completed": false,
+        "hours": 10,
+        "dateCompleted": "",
+        "score": 48,
+        "image": "https://cdn1.epicgames.com/rosemallow/offer/TOW_EGS_PortraitProductImage_1200x1600-1200x1600-cf974f29088af4a870970a09371a404a.jpg"
     }
 ]
