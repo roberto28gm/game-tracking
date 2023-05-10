@@ -11,9 +11,9 @@ export class ColorScorePipe implements PipeTransform {
 
     if(value < 50) {
       color = 'score-red';
-    } else if (value > 50 && value < 70) {
+    } else if (value >= 50 && value < 70) {
       color = 'score-yellow';
-    } else if ( value > 70 && value < 99) {
+    } else if ( value >= 70 && value < 99) {
       color = 'score-green';
     } else {
       color = 'score-limegreen';

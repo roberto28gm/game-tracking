@@ -9,8 +9,8 @@ import { Game } from '../../interfaces/game.interface';
 })
 export class TableComponent {
   @Input() data: Game[] = [];
-  IMAGE_WIDTH: number = 150;
-  IMAGE_HEIGHT: number = 150;
+  IMAGE_WIDTH: number = 120;
+  IMAGE_HEIGHT: number = 120;
   
   
   displayedColumns: string[] = [
