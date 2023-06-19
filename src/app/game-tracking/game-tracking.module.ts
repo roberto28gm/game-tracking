@@ -7,6 +7,7 @@ import { GameTrackingRoutingModule } from './game-tracking-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { TableComponent } from './components/table/table.component';
 import { ColorScorePipe } from '../pipes/color.pipe';
+import { NewGameComponent } from './pages/new-game/new-game.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ColorScorePipe } from '../pipes/color.pipe';
     PendingComponent,
     MostPlayedComponent,
     TableComponent,
-    ColorScorePipe
+    ColorScorePipe,
+    NewGameComponent
   ],
   imports: [
     CommonModule,

@@ -14,7 +14,8 @@ export class MenuComponent {
   menuItems: MenuItem[] = [
     { route: '/main', name: 'Main Screen'},
     { route: '/mostplayed', name: 'Most Played Games'},
-    { route: '/pending', name: 'Pending Games'}
+    { route: '/pending', name: 'Pending Games'},
+    { route: '/new', name: 'Add New Game'}
   ]
   
 }
