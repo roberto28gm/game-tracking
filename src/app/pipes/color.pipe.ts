@@ -9,14 +9,18 @@ export class ColorScorePipe implements PipeTransform {
 
     let color: string = '';
 
-    if(value < 50) {
-      color = 'score-red';
-    } else if (value >= 50 && value < 70) {
-      color = 'score-yellow';
-    } else if ( value >= 70 && value < 99) {
-      color = 'score-green';
+    if(!value){
+      color = 'score-gray';
     } else {
-      color = 'score-limegreen';
+      if(value < 50) {
+        color = 'score-red';
+      } else if (value >= 50 && value < 70) {
+        color = 'score-yellow';
+      } else if ( value >= 70 && value < 99) {
+        color = 'score-green';
+      } else {
+        color = 'score-limegreen';
+      }
     }
 
     return color;
