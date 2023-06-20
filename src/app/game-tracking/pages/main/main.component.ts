@@ -13,9 +13,7 @@ export class MainComponent implements OnInit {
   constructor(private dataService: DataService){}
 
   ngOnInit(): void {
-    this.dataService.readJsonData().subscribe(res => {
-      this.data = res;
-    });
+    this.data = this.dataService.readData();
   }
   
 }

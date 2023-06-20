@@ -13,14 +13,27 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  readJsonData(): Observable<Game[]> {
+  loadDefaultJSON(): Observable<Game[]> {
     return this.http.get<Game[]>(this._jsonPath);
   }
 
-  saveGame(game: Game): boolean{
-    // TODO
-    //.....
-
-    return false;
+  readData(): Game[] {
+    if(!localStorage.getItem("data")){
+      return [];
+    }
+    return JSON.parse(localStorage.getItem("data")!);
   }
+
+  saveGame(game: Game): void {
+    if(!localStorage.getItem("data")) {
+      localStorage.setItem("data", "");
+    }
+
+    let currentData = localStorage.getItem("data")!;
+    this.games = JSON.parse(currentData);
+    this.games.push(game);
+    localStorage.setItem("data", JSON.stringify(this.games));
+
+  }
+
 }
