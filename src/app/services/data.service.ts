@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Game } from '../game-tracking/interfaces/game.interface';
 import { HttpClient } from '@angular/common/http';
-import { Observable, tap } from 'rxjs';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -21,7 +21,8 @@ export class DataService {
     if(!localStorage.getItem("data")){
       return [];
     }
-    return JSON.parse(localStorage.getItem("data")!);
+    const data = localStorage.getItem("data") || "";
+    return JSON.parse(data);
   }
 
   saveGame(game: Game): void {
@@ -29,7 +30,8 @@ export class DataService {
       localStorage.setItem("data", "");
     }
 
-    let currentData = localStorage.getItem("data")!;
+    const data = localStorage.getItem("data") || "";
+    const currentData = data;
     this.games = JSON.parse(currentData);
     this.games.push(game);
     localStorage.setItem("data", JSON.stringify(this.games));

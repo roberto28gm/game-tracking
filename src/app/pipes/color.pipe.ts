@@ -7,7 +7,7 @@ export class ColorScorePipe implements PipeTransform {
 
   transform(value: number): string {
 
-    let color: string = '';
+    let color;
 
     if(!value){
       color = 'score-gray';

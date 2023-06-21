@@ -10,7 +10,7 @@ import { Game } from '../../interfaces/game.interface';
   styleUrls: ['./new-game.component.css']
 })
 export class NewGameComponent {
-  submited: boolean = false;
+  submited = false;
   numRegex = '^([0-9]{1,3})$';
 
   form: FormGroup = this.formBuilder.group({
@@ -46,21 +46,25 @@ export class NewGameComponent {
   }
 
 
-  generateId(): Number{
+  generateId(): number{
+    let gameId = 0;
+
     if(!localStorage.getItem("data")){
-      return 0;
+      return gameId;
     }
 
-    let games: Game[] = JSON.parse(localStorage.getItem("data")!);
-    const ids = games.map(x => x.id);
-    const sorted = ids.sort((a, b) => a - b);
-    const maxId = sorted[sorted.length - 1];
-
-    console.log(ids);
-    console.log(sorted);
-    console.log('max id', maxId + 1);
+    const data = localStorage.getItem("data") || "";
+    const games: Game[] = JSON.parse(data);
     
-    return maxId + 1;
+
+    if(games.length > 0){
+      const ids = games.map(x => x.id);
+      const sorted = ids.sort((a, b) => a - b);
+      const maxId = sorted[sorted.length - 1];
+      gameId = maxId + 1;
+    }
+    
+    return gameId;
   }
   
 }
