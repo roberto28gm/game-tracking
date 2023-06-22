@@ -1,6 +1,8 @@
 
 .container {
-    margin: 10px 10px;
+    position: fixed;
+    margin-top: 80px;
+    margin-left: 20px;
 }
 
 .form-container {

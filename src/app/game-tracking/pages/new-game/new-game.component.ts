@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataService } from 'src/app/services/data.service';
 import { Game } from '../../interfaces/game.interface';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 
 @Component({
@@ -10,7 +12,6 @@ import { Game } from '../../interfaces/game.interface';
   styleUrls: ['./new-game.component.css']
 })
 export class NewGameComponent {
-  submited = false;
   numRegex = '^([0-9]{1,3})$';
 
   form: FormGroup = this.formBuilder.group({
@@ -29,11 +30,11 @@ export class NewGameComponent {
 
   constructor(
       private formBuilder: FormBuilder, 
-      private dataService: DataService
+      private dataService: DataService,
+      private snackBar: MatSnackBar
   ) {}
 
   onSubmit(){
-    this.submited = true;
     if(this.form?.invalid){
       return;
     }
@@ -43,6 +44,8 @@ export class NewGameComponent {
       newGame.image = "/assets/default_image.png";
     }
     this.dataService.saveGame(newGame);
+    this.form.reset();
+    this.snackBar.open('Game added!', '', {duration: 3 * 1000});
   }
 
 

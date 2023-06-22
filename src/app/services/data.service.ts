@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Game } from '../game-tracking/interfaces/game.interface';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { formatDate } from '@angular/common';
 
 
 @Injectable({
@@ -33,9 +34,21 @@ export class DataService {
     const data = localStorage.getItem("data") || "";
     const currentData = data;
     this.games = JSON.parse(currentData);
+
+    // TODO format Date
+
     this.games.push(game);
     localStorage.setItem("data", JSON.stringify(this.games));
 
+  }
+
+  formatGameDate(game: Game): Date {
+    const gameDate = game.dateCompleted || '';
+    console.log(gameDate);
+    const formatedDate = formatDate(gameDate, 'yyyy-MM-dd', 'en-US');
+    console.log(formatedDate);
+
+    return new Date(formatedDate);
   }
 
 }
