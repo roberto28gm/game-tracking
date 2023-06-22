@@ -26,7 +26,11 @@
       <!-- HOURS -->
       <ng-container matColumnDef="hours">
         <th mat-header-cell *matHeaderCellDef>Hours</th>
-        <td mat-cell *matCellDef="let data"> {{data.hours}}h</td>
+        <td mat-cell *matCellDef="let data"> 
+          {{data.hours}} 
+          <span *ngIf="data.hours">h</span>
+          <span *ngIf="data.hours <= 0">-</span>
+        </td>
       </ng-container>
     
       <!-- DATE OF COMPLETE -->

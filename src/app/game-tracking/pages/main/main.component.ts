@@ -8,12 +8,13 @@ import { DataService } from 'src/app/services/data.service';
   templateUrl: './main.component.html'
 })
 export class MainComponent implements OnInit {
-  data: Game[] = [];
+  dataTable: Game[] = [];
 
   constructor(private dataService: DataService){}
 
   ngOnInit(): void {
-    this.data = this.dataService.readData();
+    const data = this.dataService.readData();
+    this.dataTable = data.sort((a,b) => 
+      (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
   }
-  
 }
